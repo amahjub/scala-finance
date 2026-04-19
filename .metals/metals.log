@@ -1,0 +1,35 @@
+2026.04.19 22:39:19 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\ADMB\scala-finance' for client Visual Studio Code 1.116.0.
+2026.04.19 22:39:19 INFO  Memory monitor started
+2026.04.19 22:39:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.19 22:39:20 INFO  Attempting to connect to the build server...
+2026.04.19 22:39:20 INFO  Running BSP server List(C:\Users\ADMB\AppData\Local\Coursier\cache\arc\https\github.com\scala\scala3\releases\download\3.8.3\scala3-3.8.3-x86_64-pc-win32.zip\scala3-3.8.3-x86_64-pc-win32\libexec\scala-cli.exe, --cli-default-scala-version, 3.8.3, --repository, file:///C:/Users/ADMB/AppData/Local/Coursier/cache/arc/https/github.com/scala/scala3/releases/download/3.8.3/scala3-3.8.3-x86_64-pc-win32.zip/scala3-3.8.3-x86_64-pc-win32/maven2, --prog-name, scala, --skip-cli-updates, bsp, --json-options, C:\Users\ADMB\scala-finance\.scala-build\ide-options-v2.json, --json-launcher-options, C:\Users\ADMB\scala-finance\.scala-build\ide-launcher-options.json, --envs-file, C:\Users\ADMB\scala-finance\.scala-build\ide-envs.json, C:\Users\ADMB\scala-finance\BondPricer.scala)
+2026.04.19 22:39:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\ADMB\scala-finance\.metals\bsp.trace.json or C:\Users\ADMB\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.04.19 22:39:21 INFO  BSP server: Downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.pom
+2026.04.19 22:39:21 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.pom
+2026.04.19 22:39:21 INFO  BSP server: Downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.jar
+2026.04.19 22:39:21 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.jar
+2026.04.19 22:39:22 INFO  time: Connected to build server in 1.45s
+2026.04.19 22:39:22 INFO  Connected to Build server: scala v1.12.4
+2026.04.19 22:39:22 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.19 22:39:23 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 1.12s
+2026.04.19 22:39:27 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.19 22:39:35 INFO  time: indexed workspace in 13s
+2026.04.19 22:40:57 INFO  Shutting down server
+2026.04.19 22:40:57 INFO  Memory monitor stopped
+2026.04.19 22:40:57 INFO  shutting down Metals
+2026.04.19 22:40:57 INFO  BSP server: Apr 19, 2026 10:40:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+2026.04.19 22:40:57 INFO  BSP server: WARNING: Notification threw an exception: {
+2026.04.19 22:40:57 INFO  Shut down connection with build server.
+2026.04.19 22:40:57 INFO  BSP server:   "jsonrpc": "2.0",
+2026.04.19 22:40:57 INFO  BSP server:   "method": "build/exit",
+2026.04.19 22:40:57 INFO  BSP server:   "params": null
+2026.04.19 22:40:57 INFO  BSP server: }
+2026.04.19 22:40:57 INFO  BSP server: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+2026.04.19 22:40:57 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+2026.04.19 22:40:57 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+2026.04.19 22:40:57 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+2026.04.19 22:40:57 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+2026.04.19 22:40:57 INFO  Exiting server
+2026.04.19 22:41:33 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\ADMB\scala-finance\.metals\lsp.trace.json or C:\Users\ADMB\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2026.04.19 22:41:34 INFO  logging to files C:\Users\ADMB\scala-finance\.metals\metals.log
+2026.04.19 22:41:34 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\ADMB\scala-finance' for client Visual Studio Code 1.116.0.
