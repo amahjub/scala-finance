@@ -1,16 +1,35 @@
+sealed trait Instrument
+case class Bond(face: Double, coupon: Double, maturity: Int) extends Instrument
+case class ZeroCouponBond(face: Double, maturity: Int) extends Instrument
+
+def presentValue(bond: Bond, rate: Double): Double =
+  val cashflows = (1 to bond.maturity).map: t =>
+    if t < bond.maturity then bond.coupon
+    else bond.coupon + bond.face
+  cashflows.zipWithIndex.map: (cf, i) =>
+    cf / math.pow(1 + rate, i + 1)
+  .sum
+
+def price(inst: Instrument, rate: Double): Double = inst match
+  case b: Bond => presentValue(b, rate)
+  case ZeroCouponBond(face, mat) => face / math.pow(1 + rate, mat)
+
+def duration(bond: Bond, rate: Double): Double =
+  val cashflows = (1 to bond.maturity).map: t =>
+    if t < bond.maturity then bond.coupon
+    else bond.coupon + bond.face
+  val weighted = cashflows.zipWithIndex.map: (cf, i) =>
+    (i + 1) * cf / math.pow(1 + rate, i + 1)
+  .sum
+  weighted / price(bond, rate)
+
 @main def run(): Unit =
- val rate = 0.05
- val faceValue = 1000.0
- val coupon = 50.0
- val maturity = 3
+  val rate = 0.05
 
- val pv = presentValue(faceValue, coupon, maturity, rate)
- println(s"Present Value: $pv")
-def presentValue(face: Double, coupon: Double, maturity: Int, rate: Double): Double =
- val cashflows = (1 to maturity).map: t=>
-  if t < maturity then coupon
-  else coupon + face
+  val bond = Bond(1000.0, 50.0, 3)
+  val zeroBond = ZeroCouponBond(1000.0, 3)
 
- cashflows.zipWithIndex.map: (cf, i) =>
-  cf / math.pow(1 + rate, i+1) 
- .sum
+  println(s"Bond PV: ${price(bond, rate)}")
+  println(s"Bond Duration: ${duration(bond, rate)}")
+  println(s"Zero-Coupon PV: ${price(zeroBond, rate)}")
+  println(s"Zero-Coupon Duration: ${zeroBond.maturity.toDouble}")
