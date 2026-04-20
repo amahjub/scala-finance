@@ -397,3 +397,65 @@ WARNUNG: Unmatched cancel notification for request id 5874
 2026.04.20 18:34:26 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.75s
 2026.04.20 18:36:38 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
 2026.04.20 18:36:38 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.65s
+Apr. 20, 2026 7:00:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6262
+Apr. 20, 2026 7:01:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6383
+Apr. 20, 2026 7:01:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6640
+2026.04.20 19:03:30 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:03:30 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.67s
+Apr. 20, 2026 7:05:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6926
+Apr. 20, 2026 7:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6981
+Apr. 20, 2026 7:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6985
+2026.04.20 19:05:24 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:05:24 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.6s
+2026.04.20 19:06:12 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:06:12 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.57s
+2026.04.20 19:06:52 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:06:52 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.58s
+2026.04.20 19:09:27 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:09:27 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.58s
+Apr. 20, 2026 7:09:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: Provider "chat-editing-text-model" not installed
+java.nio.file.FileSystemNotFoundException: Provider "chat-editing-text-model" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:209)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.MetalsPasteProvider.didPaste(MetalsPasteProvider.scala:29)
+	at scala.meta.internal.metals.MetalsLspService.didPaste(MetalsLspService.scala:1326)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:1268)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:265)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:195)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:189)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:97)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2026.04.20 19:09:58 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:09:58 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.48s
+2026.04.20 19:11:29 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:11:29 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.54s
+2026.04.20 19:11:51 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:11:51 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.26s
+2026.04.20 19:12:23 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:12:23 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.2s
+2026.04.20 19:13:06 INFO  compiling scala-finance_d5b77636d5-2ad652de38 (1 scala source)
+2026.04.20 19:13:06 INFO  time: compiled scala-finance_d5b77636d5-2ad652de38 in 0.56s

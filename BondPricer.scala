@@ -1,5 +1,5 @@
 sealed trait Instrument
-case class Bond(face: Double, coupon: Double, maturity: Int) extends Instrument
+case class Bond(face: Double, coupon: Double, maturity: Int, rating : Option[String]) extends Instrument
 case class ZeroCouponBond(face: Double, maturity: Int) extends Instrument
 
 def presentValue(bond: Bond, rate: Double): Double =
@@ -22,14 +22,19 @@ def duration(bond: Bond, rate: Double): Double =
     (i + 1) * cf / math.pow(1 + rate, i + 1)
   .sum
   weighted / price(bond, rate)
-
+def describe(bond: Bond): String =
+   val ratingStr = bond.rating.getOrElse("Unrated")
+   s"${bond.face} face, ${bond.coupon} coupon, ${bond.maturity} years to maturity, rating: $ratingStr"
 @main def run(): Unit =
   val rate = 0.05
 
-  val bond = Bond(1000.0, 50.0, 3)
+  val bond = Bond(1000.0, 50.0, 3, Some("AA"))
   val zeroBond = ZeroCouponBond(1000.0, 3)
+  val unratedBond = Bond(1000.0, 50.0, 3, None)
 
   println(s"Bond PV: ${price(bond, rate)}")
   println(s"Bond Duration: ${duration(bond, rate)}")
   println(s"Zero-Coupon PV: ${price(zeroBond, rate)}")
   println(s"Zero-Coupon Duration: ${zeroBond.maturity.toDouble}")
+  println(s"Bond rating: ${describe(bond)}")
+  println(s"Unrated Bond rating: ${describe(unratedBond)}")
